@@ -1,6 +1,6 @@
 # shuvi
 
-> A desktop UI libray with Vue.
+> A desktop UI library with Vue.
 
 ![shuvi-logo](./images/shuvi-logo.png)
 
