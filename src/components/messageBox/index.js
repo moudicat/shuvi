@@ -1,29 +1,30 @@
 
-import Vue from 'vue';
-import merge from '../../utils/merge';
+import Vue from 'vue'
+import merge from 'utils/merge'
+import MessageBoxVue from './src/index.vue'
 
-let MessageBoxConstructor = Vue.extend(require('./index.vue').default);
+let MessageBoxConstructor = Vue.extend(MessageBoxVue)
 
 let MessageBox = (options) => {
   if (typeof options === 'string') {
     options = {
       type: 'info',
       message: options
-    };
+    }
   }
   return new Promise((resolve, reject) => {
-    options = merge(options, {resolve, reject});
+    options = merge(options, {resolve, reject})
 
     let instance = new MessageBoxConstructor({
       data: options
-    });
+    })
 
-    let vm = instance.$mount();
-    document.getElementById('app').appendChild(vm.$el);
+    let vm = instance.$mount()
+    document.getElementById('app').appendChild(vm.$el)
 
-    vm.$el.style.zIndex = 10000;
-  });
-};
+    vm.$el.style.zIndex = 10000
+  })
+}
 
 MessageBox.alert = (options) => {
   if (typeof options === 'string') {
@@ -31,23 +32,23 @@ MessageBox.alert = (options) => {
       type: 'alert',
       title: '警告',
       message: options
-    };
+    }
   } else {
-    options.type = 'alert';
+    options.type = 'alert'
   }
-  return MessageBox(options);
-};
+  return MessageBox(options)
+}
 
 MessageBox.confirm = (options) => {
   if (typeof options === 'string') {
     options = {
       type: 'confirm',
       message: options
-    };
+    }
   } else {
-    options.type = 'confirm';
+    options.type = 'confirm'
   }
-  return MessageBox(options);
-};
+  return MessageBox(options)
+}
 
-export default MessageBox;
+export default MessageBox
