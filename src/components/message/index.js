@@ -34,6 +34,7 @@ Message.success = (options) => {
   } else {
     options.type = 'success'
   }
+
   return Message(options)
 }
 
@@ -46,6 +47,7 @@ Message.warning = (options) => {
   } else {
     options.type = 'warning'
   }
+
   return Message(options)
 }
 
@@ -58,7 +60,12 @@ Message.error = (options) => {
   } else {
     options.type = 'error'
   }
+
   return Message(options)
+}
+
+Message.install = function(Vue) {
+  Vue.component(Message.name, Message)
 }
 
 export default Message

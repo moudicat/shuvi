@@ -1,7 +1,8 @@
 import MessageBox from './components/messageBox'
 import Message from './components/message'
+import Button from './components/button'
 
-const components = [MessageBox, Message]
+const components = [MessageBox, Message, Button]
 
 const install = function(Vue, opts = {}) {
   if (install.installed) return
@@ -21,8 +22,9 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export default {
+module.exports = {
   install,
-  MessageBox,
-  Message
+  ...components
 }
+
+module.exports.default = module.exports

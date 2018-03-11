@@ -13,7 +13,8 @@ const env = process.env.NODE_ENV === 'testing'
 const buildsConfig = {
   filename: 'shuvi.js',
   library: 'shuvi',
-  libraryTarget: 'umd'
+  libraryTarget: 'umd',
+  env: 'production'
 }
 
 const webpackConfig = merge(baseWebpackConfig, {

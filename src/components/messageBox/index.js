@@ -51,4 +51,8 @@ MessageBox.confirm = (options) => {
   return MessageBox(options)
 }
 
+MessageBox.install = function(Vue) {
+  Vue.component(MessageBox.name, MessageBox)
+}
+
 export default MessageBox
