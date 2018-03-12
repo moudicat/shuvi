@@ -5,3 +5,7 @@ $grey-2: #f0f0f0;
 $white: #fff;
 
 $box-shadow-card: 0 2px 6px rgba(0,0,0,0.1);
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
