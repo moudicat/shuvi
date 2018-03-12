@@ -5,7 +5,8 @@
   "author": "Moudicat <i@0u0b.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev:css": "sass --watch src/assets/style/index.scss:dist/shuvi.css --style compressed",
+    "dev": "npm run dev:css & node build/dev.js",
     "start": "npm run dev",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
