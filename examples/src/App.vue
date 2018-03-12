@@ -1,20 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <img src="../../images/shuvi-logo.png" width="400px">
+    <h2>按钮组</h2>
     <ul>
-      <sv-button>这是一个按钮</sv-button>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
+      <sv-button @click="handleClick">这是一个按钮</sv-button>
+      <sv-button @click="handleClick" type="info">这是信息按钮</sv-button>
+      <sv-button @click="handleClick" type="success">这是成功按钮</sv-button>
+      <sv-button @click="handleClick" type="warning">这是警告按钮</sv-button>
+      <sv-button @click="handleClick" type="danger">这是危险按钮</sv-button>
+      <br>
+      <br>
+      <sv-button @click="handleClick" type="info" plain>简易信息按钮</sv-button>
+      <sv-button @click="handleClick" type="success" plain>简易成功按钮</sv-button>
+      <sv-button @click="handleClick" type="warning" plain>简易警告按钮</sv-button>
+      <sv-button @click="handleClick" type="danger" plain>简易危险按钮</sv-button>
+      <br>
+      <br>
+      <sv-button @click="handleClick" size="small">这是小按钮</sv-button>
+      <sv-button @click="handleClick" size="mini">这是迷你按钮</sv-button>
     </ul>
-    <h2>Ecosystem</h2>
+    <h2>-----</h2>
     <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
   </div>
 </template>
@@ -30,6 +36,12 @@ export default {
 
   mounted() {
     this.$info('欢迎使用shuvi主题系统');
+  },
+
+  methods: {
+    handleClick() {
+      this.$message('click!');
+    }
   }
 }
 </script>

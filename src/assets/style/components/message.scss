@@ -23,28 +23,28 @@
       left: 0;
       height: 0;
       width: 0;
-      border: 10px solid #57c5ff;
+      border: 10px solid $info;
       border-right-color: transparent;
       border-bottom-color: transparent;
     }
 
     &.success {
       .message-img {
-        border-color: #9aff8f;
+        border-color: $success;
         border-right-color: transparent;
         border-bottom-color: transparent;
       }
     }
     &.warning {
       .message-img {
-        border-color: #ff874e;
+        border-color: $warning;
         border-right-color: transparent;
         border-bottom-color: transparent;
       }
     }
     &.error {
       .message-img {
-        border-color: #ff423c;
+        border-color: $danger;
         border-right-color: transparent;
         border-bottom-color: transparent;
       }

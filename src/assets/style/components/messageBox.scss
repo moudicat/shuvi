@@ -31,7 +31,7 @@
       background-color: #fff;
       .sv-message__header-title {
         padding-left: 10px;
-        border-left: 3px solid #43c3ff;
+        border-left: 3px solid $info;
         user-select: none;
       }
       .sv-message__header-close {
@@ -64,26 +64,26 @@
       }
       .confirm {
         &:hover {
-          background-color: #79d1ff;
+          background-color: $info;
         }
       }
       .cancel {
         &:hover {
-          background-color: #ff908e;
+          background-color: $warning;
         }
       }
     }
     &.alert {
       .header {
         .title {
-          border-color: #ff6352;
+          border-color: $warning;
         }
       }
     }
     &.confirm {
       .header {
         .title {
-          border-color: #ffa94f;
+          border-color: $warning;
         }
       }
     }
