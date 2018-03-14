@@ -1,0 +1,60 @@
+.sv-tag {
+  display: inline-block;
+  padding: 0 5px;
+  height: 24px;
+  line-height: 22px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #8391a5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  .sv-tag__count {
+    padding: 0 4px;
+    border-radius: 50%;
+    color: #8391a5;
+    background-color: #fff;
+  }
+
+  &__gray {
+    background-color: #e4e8f1;
+    border-color: #e4e8f1;
+    color: #48576a;
+    .sv-tag__count {
+      color: #48576a;
+    }
+  }
+  &__blue {
+    background-color: rgba($info, 0.1);
+    border-color: rgba($info, 0.2);
+    color: $info;
+    .sv-tag__count {
+      color: $info;
+    }
+  }
+  &__green {
+    background-color: rgba($success, 0.1);
+    border-color: rgba($success, 0.4);
+    color: $success;
+    .sv-tag__count {
+      color: $success;
+    }
+  }
+  &__orange {
+    background-color: rgba($warning, 0.1);
+    border-color: rgba($warning, 0.2);
+    color: $warning;
+    .sv-tag__count {
+      color: $warning;
+    }
+  }
+  &__red {
+    background-color: rgba($danger, 0.1);
+    border-color: rgba($danger, 0.2);
+    color: $danger;
+    .sv-tag__count {
+      color: $danger;
+    }
+  }
+}

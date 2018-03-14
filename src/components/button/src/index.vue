@@ -1,5 +1,5 @@
 <template>
-  <button 
+  <button
     class="sv-button"
     @click="handleClick"
     :disabled="disabled"

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <img src="../../images/shuvi-logo.png" width="400px">
-    <h2>按钮组</h2>
-    <ul>
+    <h2>Button 按钮</h2>
+    <div>
       <sv-button @click="handleClick">这是一个按钮</sv-button>
       <sv-button @click="handleClick" type="info">这是信息按钮</sv-button>
       <sv-button @click="handleClick" type="success">这是成功按钮</sv-button>
@@ -18,10 +18,14 @@
       <br>
       <sv-button @click="handleClick" size="small">这是小按钮</sv-button>
       <sv-button @click="handleClick" size="mini">这是迷你按钮</sv-button>
-    </ul>
-    <h2>-----</h2>
-    <ul>
-    </ul>
+    </div>
+    <h2>Tag 标签</h2>
+    <div>
+      <sv-tag>标签测试</sv-tag>
+      <sv-tag :count="10">带数字的</sv-tag>
+      <sv-tag type="green">带颜色的</sv-tag>
+      <sv-tag type="red" :count="8">带颜色带数字的</sv-tag>
+    </div>
   </div>
 </template>
 

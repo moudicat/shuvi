@@ -1,8 +1,9 @@
 import MessageBox from './components/messageBox'
 import Message from './components/message'
 import Button from './components/button'
+import Tag from './components/tag'
 
-const components = [MessageBox, Message, Button]
+const components = [MessageBox, Message, Button, Tag]
 
 const install = function(Vue, opts = {}) {
   if (install.installed) return
